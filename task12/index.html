@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Roll the Die – Even or Odd</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f9ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #ffcc00;
+      margin-bottom: 30px;
+    }
+
+    .die {
+      width: 120px;
+      height: 120px;
+      background-color: #90dfff;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .die:hover {
+      transform: scale(1.05);
+      background-color: #61c4ff;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Roll the Die 🎲</h1>
+
+  <div class="die" onclick="rollDie()" id="dieFace">🎲</div>
+  <div id="result">Click the die to roll</div>
+
+  <script>
+    function rollDie() {
+      const die = document.getElementById("dieFace");
+      const resultText = document.getElementById("result");
+
+      // Generate a number between 1 and 6
+      const number = Math.floor(Math.random() * 6) + 1;
+
+      // Update die face with number
+      die.textContent = number;
+
+      // Check even or odd using if-else
+      if (number % 2 === 0) {
+        resultText.textContent = `The number ${number} is EVEN.`;
+        console.log(`The number ${number} is even.`);
+      } else {
+        resultText.textContent = `The number ${number} is ODD.`;
+        console.log(`The number ${number} is odd.`);
+      }
+    }
+  </script>
+
+</body>
+</html>

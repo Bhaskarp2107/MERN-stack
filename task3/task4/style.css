@@ -1,0 +1,108 @@
+/* Reset default margins & paddings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 1vw;
+    display: inline-block;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+.nav-links {
+    display: inline-block;
+    margin-left: 10vw;
+}
+
+.nav-links li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 2vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.user {
+    display: inline-block;
+    font-size: 1.5vw;
+    margin-right: 2vw;
+}
+
+/* Hero Section */
+.hero {
+    display: inline-block;
+    width: 100vw;
+    height: 90vh;
+    background-color: white;
+}
+
+/* Left Section */
+.hero-left {
+    display: inline-block;
+    width: 50vw;
+    height: 90vh;
+    vertical-align: top;
+    padding: 10vh 5vw;
+}
+
+.hero-left h1 {
+    font-size: 3vw;
+    color: #333;
+}
+
+.hero-left p {
+    font-size: 1.5vw;
+    color: #555;
+    margin-top: 1vw;
+}
+
+.book-btn {
+    display: inline-block;
+    margin-top: 2vw;
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Right Section */
+.hero-right {
+    display: inline-block;
+    width: 45vw;
+    height: 90vh;
+    vertical-align: top;
+    text-align: center;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

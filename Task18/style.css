@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to top, #84c9f1, #4093ec);
+}
+
+nav {
+  background: #33444b;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.links a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.user-area {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  margin-right: 10px;
+}
+
+.logout {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  margin: 20px;
+}
+
+.left, .right {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.left {
+  width: 35%;
+  margin-right: 20px;
+}
+
+.right {
+  width: 65%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#cart-items li {
+  margin-bottom: 10px;
+}
+
+.total {
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+form input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 90%;
+}
+
+form button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#service-display {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#service-img {
+  width: 200px;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.btn-group button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#add-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+#skip-btn {
+  background-color: #6c757d;
+  color: white;
+}
