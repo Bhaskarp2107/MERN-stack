@@ -1,0 +1,48 @@
+/* Apply box-sizing for consistent layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure body takes full viewport height without scrolling */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* Centered image container with required spacing */
+.image-container {
+    width: 50vw;
+    height: auto;
+    padding: 2vw;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Ensure image is responsive */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Styled button */
+.custom-button {
+    margin-top: 2vh;
+    padding: 1vh 2vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f);
+}

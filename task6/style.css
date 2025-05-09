@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-left: 2vw;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 2vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.user {
+    font-size: 1.5vw;
+    margin-right: 2vw;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2vw;
+    cursor: pointer;
+    margin-right: 2vw;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    padding: 0 5vw;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    font-size: 3vw;
+    color: #333;
+}
+
+.hero-left p {
+    font-size: 1.5vw;
+    color: #555;
+    margin-top: 1vw;
+}
+
+.book-btn {
+    display: inline-block;
+    margin-top: 2vw;
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hero-right {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 1.8vw;
+    }
+
+    .nav-links a,
+    .user {
+        font-size: 1.2vw;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left h1 {
+        font-size: 2.5vw;
+    }
+
+    .hero-left p {
+        font-size: 1.2vw;
+    }
+
+    .hero-right img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo {
+        font-size: 2vw;
+    }
+
+    .user {
+        font-size: 1.5vw;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding-top: 5vh;
+    }
+
+    .hero-left h1 {
+        font-size: 5vw;
+    }
+
+    .hero-left p {
+        font-size: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    .book-btn {
+        font-size: 3vw;
+        padding: 2vw 4vw;
+    }
+
+    .hero-right img {
+        max-width: 300px;
+    }
+}

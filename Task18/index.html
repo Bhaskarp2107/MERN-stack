@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Service Booking App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="logo">🧺 LaundryApp</div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="user-area">
+      <span class="username">Hi, User</span>
+      <button class="logout">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left">
+      <h2>Selected Services</h2>
+      <ul id="cart-items">No items added yet.</ul>
+      <div class="total">Total: ₹<span id="total">0</span></div>
+
+      <h3>Book Now</h3>
+      <form id="booking-form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Book Now</button>
+      </form>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right">
+      <h2>Browse Our Services</h2>
+      <p>Explore and select from our available laundry services below.</p>
+
+      <div id="service-display">
+        <img id="service-img" src="https://thumbs.dreamstime.com/b/cartoon-style-illustration-front-loading-washing-machine-animated-features-machine-s-door-open-revealing-364656857.jpg" alt="Service" />
+        <h3 id="service-name"></h3>
+        <p id="service-price"></p>
+        <div class="btn-group">
+          <button id="skip-btn">Skip Item</button>
+          <button id="add-btn">Add Item</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

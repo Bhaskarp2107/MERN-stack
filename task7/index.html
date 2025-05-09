@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3498db;
+            padding: 15px;
+            color: white;
+        }
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+        .menu-list {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #3498db;
+            width: 200px;
+            display: none;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .menu-list a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+        }
+        .menu-list a:hover {
+            background-color: #2980b9;
+        }
+        .menu-button:focus + .menu-list {
+            display: flex;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            padding: 0 5vw;
+        }
+       
+.book-btn {
+    display: inline-block;
+    margin-top: 2vw;
+    padding: 1vw 3vw;
+    font-size: 1.5vw;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Laundry App</h1>
+        <button class="menu-button">&#9776;</button>
+        <div class="menu-list">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Pricing</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-left">
+            <h1>Premium Laundry Service</h1>
+            <p>Fast, reliable, and affordable laundry services right at your doorstep. Book your service today!</p>
+            <button class="book-btn">Book a Service Today</button>
+        </div>
+        <div class="hero-right">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXL8u28vjtBH82UErzUxNi4TSwW555oK5ZFw&s" alt="Laundry Service">
+        </div>
+    </section>
+</body>
+</html>

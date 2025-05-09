@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Operations</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #c392f286;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: rgb(240, 230, 217);
+    }
+    .results {
+      margin-top: 20px;
+      background: #a986f9a0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Array Operations (Max, Sum, Odd Count)</h2>
+  <p>Enter numbers separated by commas:</p>
+  <input type="text" id="arrayInput" placeholder="e.g. 10, 21, 32, 47">
+  <br>
+  <button onclick="processArray()">Process Array</button>
+
+  <div class="results" id="output"></div>
+
+  <script>
+
+    const findMax = (arr) => Math.max(...arr);
+
+
+    function calculateSum(arr) {
+      return arr.reduce((sum, num) => sum + num, 0);
+    }
+
+    const countOdds = function(arr) {
+      return arr.filter(num => num % 2 !== 0).length;
+    };
+
+    function processArray() {
+      const input = document.getElementById("arrayInput").value;
+      const numbers = input.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
+
+      if (numbers.length === 0) {
+        document.getElementById("output").innerHTML = "<p>Please enter valid numbers.</p>";
+        return;
+      }
+
+      const max = findMax(numbers);
+      const sum = calculateSum(numbers);
+      const oddCount = countOdds(numbers);
+
+      document.getElementById("output").innerHTML = `
+        <p><strong>Maximum Number:</strong> ${max}</p>
+        <p><strong>Sum of Elements:</strong> ${sum}</p>
+        <p><strong>Count of Odd Numbers:</strong> ${oddCount}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

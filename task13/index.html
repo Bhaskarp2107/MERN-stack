@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Analyzer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f9ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #2d6cdf;
+    }
+
+    input, button {
+      font-size: 18px;
+      padding: 8px 15px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    button {
+      background-color: #2d6cdf;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1c50aa;
+    }
+
+    .results {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      margin-top: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .results p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔍 Number Analyzer</h1>
+  <input type="number" id="numInput" placeholder="Enter a number" />
+  <button onclick="analyzeNumber()">Check</button>
+
+  <div class="results" id="resultBox"></div>
+
+  <script>
+    function analyzeNumber() {
+      const n = parseInt(document.getElementById("numInput").value);
+      if (isNaN(n) || n <= 0) {
+        document.getElementById("resultBox").innerHTML = "<p>Please enter a positive number!</p>";
+        return;
+      }
+
+
+      //  Prime check
+      let isPrime = true;
+      if (n < 2) isPrime = false;
+      else {
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+      }
+
+      //  All factors
+      let factors = "";
+      for (let i = 1; i <= n; i++) {
+        if (n % i === 0) factors += i + " ";
+      }
+
+      //  Sum of digits
+      let digitSum = 0, temp = n;
+      while (temp > 0) {
+        digitSum += temp % 10;
+        temp = Math.floor(temp / 10);
+      }
+
+      //  Armstrong check
+      let armstrongSum = 0, temp2 = n;
+      while (temp2 > 0) {
+        let digit = temp2 % 10;
+        armstrongSum += digit ** 3;
+        temp2 = Math.floor(temp2 / 10);
+      }
+      let isArmstrong = (armstrongSum === n);
+
+      // Output
+      document.getElementById("resultBox").innerHTML = `
+        <p>${n} is <strong>${isPrime ? "a Prime" : "NOT a Prime"}</strong> number.</p>
+        <p>Factors of ${n}: <strong>${factors}</strong></p>
+        <p>Sum of digits: <strong>${digitSum}</strong></p>
+        <p>${n} is <strong>${isArmstrong ? "an Armstrong" : "NOT an Armstrong"}</strong> number.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
