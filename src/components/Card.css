@@ -1,0 +1,24 @@
+.gradient-border {
+    background: linear-gradient(135deg, #6d6877, #51058f);
+    padding: 3px;
+    border-radius: 12px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .card {
+    background: linear-gradient(135deg, #9619ef 0%, #e59814 100%);;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    
+  }
+  
+  .card-img {
+    width: 230px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: transparent
+  }
+  
